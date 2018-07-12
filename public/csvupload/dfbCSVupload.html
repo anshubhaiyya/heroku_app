@@ -1,0 +1,52 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="dfbCSVupload.js"></script>
+        <script type="text/javascript" src="jquery.csv-0.71.min.js"></script>
+        <style>
+            .enter {width: 150px;
+                      height: 25px;
+                      margin-left: 12px;}
+            .submit {width: 150px;
+                      height: 25px;}
+            #responsehandler {color: blue;
+                              border-width: 1px;
+                              border-color: grey;
+                              border-style: solid;
+                              font-style: italic;}
+            #appkey {width: 300px;}
+            #output {margin-top: 20px;}
+            #responsewrapper {display: none;
+                              margin-top: 40px;}
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="keyenter">
+            Step 1) Please enter your App Key <input id="appkey" value="" type="text">
+            </input><button id="appkeysubmit" type="button" class="enter" value="submit">Submit</button><br>
+            <i>Note: To generate an Access Token, click <a href="https://www.dropbox.com/developers/apps">here</a></i><br><br>
+        </div>
+        
+        <div id="fileenter">
+            Step 2) Please upload your CSV <input type="file" name="FileUpload" id="FileUpload" accept=".csv" /><br>
+            <i>Note: Example CSV format <a href="testupload.csv">here</a></i><br><br>
+        </div>
+        
+        <div id="email">
+            Step 3) Send automated emails to invited users <input type="checkbox" id="emailcheck" name="emailcheck" value="true" checked><br><br>
+        </div>
+        
+        <div id="start">
+            Step 4) <button class="submit" id="submit">Start User CSV Upload</button>
+        </div>
+
+        <div id="output"></div>
+        <div id="responsewrapper">API call results:
+            <div id="responsehandler"></div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="clever-login.js"></script>
+        <style>
+            .tablehead {font-weight: bold;
+                        color: blue;}
+            #user td {width: 100px;}
+            #results {display: none;}
+        </style>
+    </head>
+    <body>
+        Successful sign in! <br><br>
+        <div id="results">
+            Here are the details of your account from the /me API request
+            <table id = "user">    
+                <tr>
+                    <td class = "tablehead">User Type</td>
+                    <td class = "tablehead">User ID</td>
+                    <td class = "tablehead">District ID</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

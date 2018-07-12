@@ -1,0 +1,5 @@
+member_given_name,member_surname,member_email,role,member_external_id
+shake,lahoti,shake+csv@hanfordinc.com,team_admin,0001
+frank,costa,frankie+csv@hanfordinc.com,member_only,0002
+kristin,boyer,kristinb+csv@hanfordinc.com,user_management_admin,0003
+kelly,marren,kellym+csv@hanfordinc.com,support_admin,0004

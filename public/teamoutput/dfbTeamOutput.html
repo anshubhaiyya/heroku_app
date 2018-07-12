@@ -1,0 +1,51 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://dfbshake.herokuapp.com/tabletoCSV.js"></script>
+        <script type="text/javascript" src="dfbTeamOutput.js"></script>
+        <style>
+            .choices {width: 150px;
+                      height: 25px;
+                      margin-right: 10px;
+                      margin-bottom: 10px;
+                      margin-top: 20px;}
+            .enter {width: 150px;
+                      height: 25px;
+                      margin-left: 12px;}
+            #headrow {font-weight: bold;}
+            #tableoutput td {width: 100px;}
+            .subrow {color: red;}
+            #errorhandler {color: red;}
+            #appkey {width: 300px;}
+        </style>
+    </head>
+    <body>
+        
+        <div id="keyenter">
+            Please enter your App Key <input id="appkey" value="" type="text">
+            </input><button id="submit" type="button" class="enter" value="submit">Submit</button><br>
+            <i>Note: To generate an Access Token, click <a href="https://www.dropbox.com/developers/apps">here</a></i>
+        </div>
+        
+        
+        
+        <div id="buttons">
+            <button type="button" class="choices" value="get_info">Get Team's Info</button>
+            <button type="button" class="choices" value="members/list">List All Users</button>
+            <button type="button" class="choices" value="groups/list">List All Groups</button>
+            <button type="button" class="choices" value="clear">Clear Results</button>
+
+        </div>
+        <div id="exportspace">
+            
+        </div>
+        <div id="output"></div>
+            <div id="errorhandler"></div>
+            <table id = "tableoutput">
+
+            </table>
+        </div>
+        
+    </body>
+</html>

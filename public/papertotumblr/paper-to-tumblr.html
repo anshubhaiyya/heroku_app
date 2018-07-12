@@ -1,0 +1,49 @@
+<html>
+    
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="papertumblr.js"></script>
+        <script type="text/javascript" src="jquery.csv-0.71.min.js"></script>
+        <script type="text/javascript" src="hello.all.min.js"></script>
+        <style>
+            .enter {width: 150px;
+                      height: 25px;
+                      margin-left: 12px;}
+            .submit {width: 150px;
+                      height: 25px;}
+            .paperprev {color: grey;
+                              border-width: 1px;
+                              border-color: black;
+                              border-style: solid;
+                              height: 200px;
+                              width: 638px;
+                              overflow: scroll;}
+            #docurl {width: 400px;}
+            #tumblrsubmit {margin-top: 20px;}
+            #response {display: none;
+                       margin-top: 15px;}
+            #docenter {margin-bottom: 15px;}
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="docenter">
+            Step 1) Please enter your Paper URL <input id="docurl" value="" type="text">
+            </input><button id="docidsubmit" type="button" class="enter" value="retrieve">Retrieve</button><br>
+        </div>
+        
+        
+        Your Paper Doc will preview here
+        <div id="paperpreview" class="paperprev">  
+        </div>
+        
+        <div id="tumblrsubmit">
+            Step 2) Send to Tumblr<button id="tblrsubmit" type="button" class="enter" value="submit">Submit</button><br>
+        </div>
+        
+        <div id="response" class="paperprev">
+        </div>
+
+    </body>
+</html>
