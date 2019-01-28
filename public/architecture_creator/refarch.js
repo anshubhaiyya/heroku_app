@@ -1,5 +1,4 @@
-//to-dos: find a way to loop API call with a cursor in order to do teams more than 1000
-//to-dos: find a way to link anybody's DfB Admin account
+//updated 28-Jan-2019
 
 $(document).ready( function() {
    
