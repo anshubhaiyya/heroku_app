@@ -113,28 +113,32 @@ $(document).ready( function() {
    });
 
    
-   $('#password').focus( function() {
+   $('#pwd').focus( function() {
         if ( $(this).val()== "TYPE PASSWORD HERE") {
+            $(this).css('color','#000000');
+            $(this).prop('type', 'password')
             $(this).val('');
         } 
     });
 
-    $("#password").blur( function() {
+    $("#pwd").blur( function() {
         if ( $(this).val()=="") {
+            $(this).css('color','#D3D3D3');
+            $(this).prop('type', 'text')
             $(this).val('TYPE PASSWORD HERE');
         } 
     });
    
    $('#sendpass').click( function () {
       
-      var inputcode = $('#password').val();
+      var inputcode = $('#pwd').val();
       if (inputcode == 'welcome to the ecosystem!') {
         window.location.href = "https://dfbshake.herokuapp.com/architecture_creator/refarch-pass.html";
       }
       else
       {
          alert("Incorrect Password, please try again")
-         $('#password').val('');
+         $('#pwd').val('');
       }
    });
    
