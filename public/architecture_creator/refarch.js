@@ -6,8 +6,7 @@ $(document).ready( function() {
    var checkbox_counter = 0;
    var unchecked_boxes;
    var checked_boxes = ["","","","","",""];
-
-     
+  
    $('input[type="radio"]').click( function () {
 
          var img_url="logos/";
@@ -114,8 +113,32 @@ $(document).ready( function() {
          
    });
 
+   
+   $('#password').focus( function() {
+        if ( $(this).val()== "TYPE PASSWORD HERE") {
+            $(this).val('');
+        } 
+    });
 
-
+    $("#password").blur( function() {
+        if ( $(this).val()=="") {
+            $(this).val('TYPE PASSWORD HERE');
+        } 
+    });
+   
+   $('#sendpass').click( function () {
+      
+      var inputcode = $('#password').val();
+      if (inputcode == 'welcome to the ecosystem!') {
+        window.location.href = "http://dfbshake.herokuapp.com/architecture_creator/refarch-pass.html";
+      }
+      else
+      {
+         alert("Incorrect Password, please try again")
+         $('#password').val('');
+      }
+   });
+   
    $('#pdf-generator').click( function () {
               
       alert('working on it!');

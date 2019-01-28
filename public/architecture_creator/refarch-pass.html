@@ -1,0 +1,303 @@
+<html>
+    <!-- GitHub Build -->
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="refarch.js"></script>
+        <style>
+            .choices {margin-top: 10px; margin-bottom: 10px;}
+            /*#output {position: relative;}*/
+            #base-arch {position: relative;}
+            #workflow-holder {position: absolute; top: 765; left: 275; width: 275; height: 80; background-image: url("placeholders/workflow.png");}
+            #workflow-img {max-width: 200px; max-height: 50px; margin-top: 15px; margin-left: 50px;}
+            #idm-holder {position: absolute; top: 950; left: 64; width: 115; height: 65;background-image: url("placeholders/idm.png");}
+            #idm-img {max-width: 100px; margin-left: 8px;}
+            #siem-holder {position: absolute; top: 835; left: 1131; width: 110; height: 65;background-image: url("placeholders/siem.png");}
+            #siem-img {max-width: 100px; margin-left: 8px;}
+            #emm-holder {position: absolute; top: 765; left: 795; width: 220; height: 80; background-image: url("placeholders/emm.png");}
+            #emm-img {max-width: 160px; max-height: 70px; margin-top: 10px; margin-left: 20px;}            
+            #migration-holder {position: absolute; top: 890; left: 780; width: 150; height: 85; background-image: url("placeholders/migration.png");}
+            #migration-img {max-width: 140px; max-height: 85px; margin-top: 25px;}
+            #casb-holder {position: absolute; top: 1030; left: 595; width: 205; height: 70; background-image: url("placeholders/casb.png");}
+            #casb-img {max-width: 180px; max-height: 55px; margin-top: 12px;}
+            #drm-holder {position: absolute; top: 1030; left: 840; width: 205; height: 70; background-image: url("placeholders/drm.png");}
+            #drm-img {max-width: 180px;}
+            #enduser-holder {position: absolute; top: 890; left: 245; height: 210; width: 260; background-image: url("placeholders/enduser.png");}
+            .enduserimage-spot {max-height: 50px}
+            .enduser-png {max-width: 95px; max-height: 50px;}
+
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var refUri = document.referrer;
+            if (refUri.indexOf('refarch.html') == -1) {
+                window.loction.href = "http://dfbshake.herokuapp.com/architecture_creator/refarch.html")
+            }
+        </script>
+        
+        <h2>Enterprise Architecture Tool v1</h2> 
+        
+        Select Your Partners Below to Create Your Customized Architecture <br>
+       <div id="selection area"> 
+        <div id="idm" class="choices">
+            1. Identity and Access Management<br>
+            <input type="radio" id="oktaidm" name="idm" value="https://www.dropbox.com/business/app-integrations/okta">
+            <label for="oktaidm"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/okta">Okta</a></label>
+
+            <input type="radio" id="azure" name="idm" value="https://www.dropbox.com/business/app-integrations/Microsoft">
+            <label for="azure"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/Microsoft">Microsoft Azure</a></label>
+
+            <input type="radio" id="onelogin" name="idm" value="https://www.dropbox.com/business/app-integrations/onelogin">
+            <label for="onelogin"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/onelogin">OneLogin</a></label>
+            
+            <input type="radio" id="centrify" name="idm" value="https://www.dropbox.com/business/app-integrations/centrify">
+            <label for="centrify"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/centrify">Centrify</a></label>
+            
+            <input type="radio" id="ping" name="idm" value="https://www.pingidentity.com/en/lp/sso-to-dropbox.html">
+            <label for="ping"><a target="_blank" href="https://www.pingidentity.com/en/lp/sso-to-dropbox.html">Ping Identity</a></label>
+            
+            <input type="radio" id="rsa" name="idm" value="https://www.dropbox.com/business/app-integrations/RSA">
+            <label for="rsa"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/RSA">RSA SecurID</a></label>
+            
+            <input type="radio" id="noidm" name="idm" value="noidm" checked="checked">
+            <label for="noidm">None</label>
+            
+        </div>
+        
+        <div id="casb" class="choices">
+            2. Cloud Access Security Brokers (Data-Loss Prevention)<br>
+            <input type="radio" id="symantec" name="casb" value="https://www.dropbox.com/business/app-integrations/Symantec">
+            <label for="symantec"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/Symantec">Symantec</a></label>
+
+            <input type="radio" id="netskope" name="casb" value="https://www.dropbox.com/business/app-integrations/netskope">
+            <label for="netskope"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/netskope">Netskope</a></label>
+            
+            <input type="radio" id="cloudlock" name="casb" value="https://www.dropbox.com/business/app-integrations/CloudLock">
+            <label for="cloudlock"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/CloudLock">CloudLock</a></label>
+            
+            <input type="radio" id="paloaltonetworks" name="casb" value="https://www.dropbox.com/business/app-integrations/aperture-by-palo-alto-networks">
+            <label for="paloaltonetworks"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/aperture-by-palo-alto-networks">Palo Alto Networks</a></label>
+            
+            <input type="radio" id="ciphercloud" name="casb" value="https://www.dropbox.com/business/app-integrations/ciphercloud">
+            <label for="ciphercloud"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/ciphercloud">CipherCloud</a></label>
+            
+            <input type="radio" id="msftcloudsecurity" name="casb" value="https://www.dropbox.com/business/app-integrations/Microsoft-Cloud-App-Security">
+            <label for="msftcloudsecurity"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/Microsoft-Cloud-App-Security">Microsoft Cloud App Security</a></label>
+            
+            <input type="radio" id="skyhigh" name="casb" value="https://www.dropbox.com/business/app-integrations/skyhigh">
+            <label for="skyhigh"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/skyhigh">SkyHigh</a></label>
+            
+            <input type="radio" id="nocasb" name="casb" value="nocasb" checked="checked">
+            <label for="nocasb">None</label>
+            
+        </div>
+        
+        <div id="siem" class="choices">
+            3. Security Information and Event Management<br>
+            <input type="radio" id="splunk" name="siem" value="https://www.dropbox.com/business/app-integrations/splunk">
+            <label for="splunk"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/splunk">Splunk</a></label>
+            
+            <input type="radio" id="domo" name="siem" value="https://www.dropbox.com/business/app-integrations/domo">
+            <label for="domo"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/domo">Domo</a></label>
+            
+            <input type="radio" id="looker" name="siem" value="https://looker.com">
+            <label for="looker"><a target="_blank" href="https://looker.com">Looker</a></label>
+            
+            <input type="radio" id="nosiem" name="siem" value="nosiem" checked="checked">
+            <label for="nosiem">None</label>
+        
+        </div>
+        
+        <div id="workflow" class="choices">
+            4. SaaS Operations and Custom Workflows<br>
+            <input type="radio" id="bettercloud" name="workflow" value="https://www.bettercloud.com/">
+            <label for="bettercloud"><a target="_blank" href="https://www.bettercloud.com/">BetterCloud</a></label>
+            
+            <input type="radio" id="nintex" name="workflow" value="https://www.dropbox.com/business/app-integrations/nintex">
+            <label for="nintex"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/nintex">Nintex</a></label>
+            
+            <input type="radio" id="ifttt" name="workflow" value="https://www.dropbox.com/business/app-integrations/ifttt">
+            <label for="ifttt"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/ifttt">IFTTT</a></label>
+            
+            <input type="radio" id="zapier" name="workflow" value="https://www.dropbox.com/business/app-integrations/zapier">
+            <label for="zapier"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/zapier">Zapier</a></label>
+            
+            <input type="radio" id="azuqua" name="workflow" value="https://azuqua.com/app-library/dropbox">
+            <label for="azuqua"><a target="_blank" href="https://azuqua.com/app-library/dropbox">Azuqua</a></label>
+            
+            <input type="radio" id="builtio" name="workflow" value="https://www.built.io/products/flow/integrations">
+            <label for="builtio"><a target="_blank" href="https://www.built.io/products/flow/integrations">Built.io</a></label>
+            
+            <input type="radio" id="noworkflow" name="workflow" value="noworkflow" checked="checked">
+            <label for="noworkflow">None</label>
+        
+        </div>
+        
+        
+        <div id="migration" class="choices">
+            5. Data Migration<br>
+            <input type="radio" id="tervela" name="migration" value="https://www.dropbox.com/business/app-integrations/tervela-cloud-fastpath">
+            <label for="tervela"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/tervela-cloud-fastpath">Tervela</a></label>
+            
+            <input type="radio" id="skysync" name="migration" value="https://www.dropbox.com/business/app-integrations/skysync">
+            <label for="skysync"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/skysync">SkySync</a></label>
+            
+            <input type="radio" id="bittitan" name="migration" value="https://www.dropbox.com/business/app-integrations/BitTitan">
+            <label for="bittitan"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/BitTitan">BitTitan</a></label>
+            
+            <input type="radio" id="mover" name="migration" value="https://mover.io/connectors/dropbox/">
+            <label for="mover"><a target="_blank" href="https://mover.io/connectors/dropbox/">Mover</a></label>
+            
+            <input type="radio" id="nomigration" name="migration" value="nomigration" checked="checked">
+            <label for="nomigration">None</label>
+        
+        </div>
+        
+        <div id="emm" class="choices">
+            6. Device Management<br>
+            <input type="radio" id="airwatch" name="emm" value="https://www.dropbox.com/business/app-integrations/vmware-airwatch">
+            <label for="airwatch"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/vmware-airwatch">VMWare Airwatch</a></label>
+            
+            <input type="radio" id="mobileiron" name="emm" value="https://www.dropbox.com/business/app-integrations/mobileiron">
+            <label for="mobileiron"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/mobileiron">Mobile Iron</a></label>
+         
+            <input type="radio" id="oktaemm" name="emm" value="https://www.dropbox.com/business/app-integrations/okta">
+            <label for="oktaemm"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/okta">Okta</a></label>
+                 
+            <input type="radio" id="ibm" name="emm" value="https://www.dropbox.com/business/app-integrations/ibm">
+            <label for="ibm"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/ibm">IBM</a></label>     
+        
+            <input type="radio" id="noemm" name="emm" value="noemm" checked="checked">
+            <label for="noemm">None</label>
+        
+        </div>
+        
+        <div id="drm" class="choices">
+            7. Data Rights Management<br>
+            <input type="radio" id="vera" name="drm" value="https://www.dropbox.com/business/app-integrations/vera">
+            <label for="vera"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/vera">Vera</a></label>
+
+            <input type="radio" id="sookasa" name="drm" value="https://www.dropbox.com/business/app-integrations/sookasa">
+            <label for="sookasa"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/sookasa">Sookasa</a></label>
+            
+            <input type="radio" id="boxcryptor" name="drm" value="https://www.dropbox.com/business/app-integrations/boxcryptor">
+            <label for="boxcryptor"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/boxcryptor">boxcryptor</a></label>
+            
+            <input type="radio" id="nodrm" name="drm" value="nodrm" checked="checked">
+            <label for="nodrm">None</label>
+        
+        </div>
+        
+        <div id="enduser" class="choices">
+            8. End-User SaaS Applications (choose up to 6)<br>
+            <input type="checkbox" id="salesforce" name="enduser" value="https://www.dropbox.com/business/app-integrations/Salesforce">
+            <label for="salesforce"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/Salesforce">Salesforce</a></label>
+            
+            <input type="checkbox" id="slack" name="enduser" value="https://www.dropbox.com/business/app-integrations/slack">
+            <label for="slack"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/slack">Slack</a></label>
+            
+            <input type="checkbox" id="jira" name="enduser" value="https://www.dropbox.com/business/app-integrations/atlassian-jira">
+            <label for="jira"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/atlassian-jira">Atlassian Jira</a></label>
+            
+            <input type="checkbox" id="autodesk" name="enduser" value="https://www.dropbox.com/business/app-integrations/autodesk">
+            <label for="autodesk"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/autodesk">Autodesk</a></label>
+            
+            <input type="checkbox" id="workplace" name="enduser" value="https://www.dropbox.com/business/app-integrations/workplace-by-facebook">
+            <label for="workplace"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/workplace-by-facebook">Workplace by Facebook</a></label>
+            
+            <input type="checkbox" id="docusign" name="enduser" value="https://www.dropbox.com/business/app-integrations/docusign">
+            <label for="docusign"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/docusign">Docusign</a></label>
+            
+            <input type="checkbox" id="blackboard" name="enduser" value="https://www.dropbox.com/business/app-integrations/blackboard">
+            <label for="blackboard"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/blackboard">Blackboard</a></label>
+            
+            <input type="checkbox" id="hipchat" name="enduser" value="https://www.dropbox.com/business/app-integrations/atlassian-hipchat">
+            <label for="hipchat"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/atlassian-hipchat">Atlassian Hipchat</a></label>
+            
+            <input type="checkbox" id="asana" name="enduser" value="https://www.dropbox.com/business/app-integrations/asana">
+            <label for="asana"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/asana">Asana</a></label>
+            
+            <input type="checkbox" id="trello" name="enduser" value="https://www.dropbox.com/business/app-integrations/trello">
+            <label for="trello"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/trello">Trello</a></label>
+            
+            <input type="checkbox" id="adobe" name="enduser" value="https://www.dropbox.com/business/app-integrations/adobe">
+            <label for="adobe"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/adobe">Adobe</a></label>
+            
+            <input type="checkbox" id="zendesk" name="enduser" value="https://www.dropbox.com/business/app-integrations/zendesk">
+            <label for="zendesk"><a target="_blank" href="https://www.dropbox.com/business/app-integrations/zendesk">Zendesk</a></label>
+                
+            </div>
+        </div>
+        
+        <div id="output">
+
+            <img id="base-arch" src="refarch-ex-lg.png"/>
+            
+            <div id="idm-holder">
+                <a target = "_blank" href="#" id="idm-link"><img id="idm-img" src=""/></a>
+            </div>
+            
+            <div id="workflow-holder">
+                <a  target = "_blank" href="#" id="workflow-link"><img id="workflow-img" src=""/></a>
+            </div>
+            
+            <div id="emm-holder">
+                <a  target = "_blank" href="#" id="emm-link"><img id="emm-img" src=""/></a>
+            </div>
+            
+            <div id="casb-holder">
+                <a  target = "_blank" href="#" id="casb-link"><img id="casb-img" src=""/></a>
+            </div>
+            
+            <div id="drm-holder">
+                <a  target = "_blank" href="#" id="drm-link"><img id="drm-img" src=""/></a>
+            </div>
+            
+            <div id="migration-holder">
+                <a  target = "_blank" href="#" id="migration-link"><img id="migration-img" src=""/></a>
+            </div>
+    
+            <div id="siem-holder">
+                <a target = "_blank" href="#" id="siem-link"><img id="siem-img" src=""/></a>
+            </div>        
+            
+            <table id="enduser-holder">
+                <tr>
+                    <td class="enduserimage-spot" align="center">
+                        <a target = "_blank" href="#" id="endl1"><img id="end1" class="enduser-png" src=""/></a>
+                    </td>
+                    <td class="enduserimage-spot">
+                        <a target = "_blank" href="#" id="endl2"><img id="end2" class="enduser-png" src=""/></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="enduserimage-spot" align="center">
+                        <a target = "_blank" href="#" id="endl3"><img id="end3" class="enduser-png" src=""/></a>
+                    </td>
+                    <td class="enduserimage-spot" align="center">
+                        <a target = "_blank" href="#" id="endl4"><img id="end4" class="enduser-png" src=""/></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="enduserimage-spot" align="center">
+                        <a target = "_blank" href="#" id="endl5"><img id="end5" class="enduser-png" src=""/></a>
+                    </td>
+                    <td class="enduserimage-spot" align="center">
+                        <a target = "_blank" href="#" id="endl6"><img id="end6" class="enduser-png" src=""/></a>
+                    </td>                         
+                </tr>
+            </table>
+        </div>
+        <div id="export-area">
+            
+            <div id="editor"></div>
+            <button id="pdf-generator">
+                Export to PDF
+            </button>
+            
+            
+        </div>
+    </body>
+</html>
