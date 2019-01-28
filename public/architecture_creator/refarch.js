@@ -130,7 +130,7 @@ $(document).ready( function() {
       
       var inputcode = $('#password').val();
       if (inputcode == 'welcome to the ecosystem!') {
-        window.location.href = "http://dfbshake.herokuapp.com/architecture_creator/refarch-pass.html";
+        window.location.href = "https://dfbshake.herokuapp.com/architecture_creator/refarch-pass.html";
       }
       else
       {
