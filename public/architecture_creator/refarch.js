@@ -143,8 +143,20 @@ $(document).ready( function() {
    });
    
    $('#pdf-generator').click( function () {
-              
-      alert('working on it!');
+      
+      var doc = new jsPDF();
+      var specialElementHandlers = {
+         '#editor': function (element, renderer) {
+            return true;
+         }
+      };
+      doc.fromHTML($('#output').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+      });
+      doc.save('sample-file.pdf');
+      
+     //alert('working on it!');
       
    });
 
