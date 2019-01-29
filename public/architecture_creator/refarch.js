@@ -144,7 +144,7 @@ $(document).ready( function() {
    
    $('#pdf-generator').click( function () {
       
-      var doc = new jsPDF();
+      /*var doc = new jsPDF();
       var specialElementHandlers = {
          '#editor': function (element, renderer) {
             return true;
@@ -154,9 +154,9 @@ $(document).ready( function() {
         'width': 170,
             'elementHandlers': specialElementHandlers
       });
-      doc.save('sample-file.pdf');
+      doc.save('reference-architecture.pdf');*/
       
-     //alert('working on it!');
+     alert('working on it!');
       
    });
 
