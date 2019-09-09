@@ -1,4 +1,4 @@
-//updated 28-Jan-2019
+//updated 6-Sept-2019
 
 $(document).ready( function() {
    
@@ -24,10 +24,10 @@ $(document).ready( function() {
          
          if (img_url.indexOf("no") != -1) {
             $(name_id).attr("src", "");
-            $(holder_id).css('background-image', holder_css);
+            //$(holder_id).css('background-image', holder_css);
          }
          else {
-            //console.log(name_id + " & " + img_url + " & " + holder_id);
+            console.log(name_id + " & " + img_url + " & " + holder_id);
             $(name_id).attr("src", img_url);
             $(holder_id).css('background-image', 'none');
             $(click_id).attr("href", click_url);
@@ -35,7 +35,56 @@ $(document).ready( function() {
          
    });
 
-   $('input[type="checkbox"]').change( function () {
+   
+   $('#pwd').focus( function() {
+        if ( $(this).val()== "TYPE PASSWORD HERE") {
+            $(this).css('color','#000000');
+            $(this).prop('type', 'password')
+            $(this).val('');
+        } 
+    });
+
+    $("#pwd").blur( function() {
+        if ( $(this).val()=="") {
+            $(this).css('color','#D3D3D3');
+            $(this).prop('type', 'text')
+            $(this).val('TYPE PASSWORD HERE');
+        } 
+    });
+   
+   $('#sendpass').click( function () {
+      
+      var inputcode = $('#pwd').val();
+      if (inputcode == 'welcome to the ecosystem!') {
+        window.location.href = "https://dfbshake.herokuapp.com/architecture_creator/lobarch-pass.html";
+      }
+      else
+      {
+         alert("Incorrect Password, please try again")
+         $('#pwd').val('');
+      }
+   });
+   
+   $('#pdf-generator').click( function () {
+      
+      /*var doc = new jsPDF();
+      var specialElementHandlers = {
+         '#editor': function (element, renderer) {
+            return true;
+         }
+      };
+      doc.fromHTML($('#output').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+      });
+      doc.save('reference-architecture.pdf');*/
+      
+     alert('working on it!');
+      
+   });
+
+/*s   
+$('input[type="checkbox"]').change( function () {
         
          var end_img_url="";
          var end_name_id="";
@@ -111,54 +160,6 @@ $(document).ready( function() {
          }
          
    });
-
-   
-   $('#pwd').focus( function() {
-        if ( $(this).val()== "TYPE PASSWORD HERE") {
-            $(this).css('color','#000000');
-            $(this).prop('type', 'password')
-            $(this).val('');
-        } 
-    });
-
-    $("#pwd").blur( function() {
-        if ( $(this).val()=="") {
-            $(this).css('color','#D3D3D3');
-            $(this).prop('type', 'text')
-            $(this).val('TYPE PASSWORD HERE');
-        } 
-    });
-   
-   $('#sendpass').click( function () {
-      
-      var inputcode = $('#pwd').val();
-      if (inputcode == 'welcome to the ecosystem!') {
-        window.location.href = "https://dfbshake.herokuapp.com/architecture_creator/lobarch-pass.html";
-      }
-      else
-      {
-         alert("Incorrect Password, please try again")
-         $('#pwd').val('');
-      }
-   });
-   
-   $('#pdf-generator').click( function () {
-      
-      /*var doc = new jsPDF();
-      var specialElementHandlers = {
-         '#editor': function (element, renderer) {
-            return true;
-         }
-      };
-      doc.fromHTML($('#output').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-      });
-      doc.save('reference-architecture.pdf');*/
-      
-     alert('working on it!');
-      
-   });
-
+*/
    
 });  
