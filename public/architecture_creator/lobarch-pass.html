@@ -9,11 +9,17 @@
             .choices {margin-top: 10px; margin-bottom: 10px;}
             /*#output {position: relative;}*/
             #base-arch {position: relative; width:1175px;}
-            #rec-hr-holder {position: absolute; top: 670; left: 167; width: 192; height: 77;}
-            #rec-hr-img {text-align: center; max-height: 100%; max-width: 100%;}
-            
-            
-            #workflow-img {max-width: 200px; max-height: 50px; margin-top: 15px; margin-left: 50px;}
+            #rec-hr-holder {position: absolute; top: 674; left: 174; width: 192; height: 77;}
+            #marketing-holder {position: absolute; top: 771; left: 174; width: 192; height: 77;}
+            #finance-holder {position: absolute; top: 872; left: 174; width: 192; height: 77;}
+            #crm-holder {position: absolute; top: 973; left: 174; width: 192; height: 77;}
+            #bi-holder {position: absolute; top: 1069; left: 174; width: 192; height: 77;}
+            #email-holder {position: absolute; top: 672; left: 851; width: 192; height: 77;}
+            #chat-holder {position: absolute; top: 769; left: 851; width: 192; height: 77;}
+            #meetings-holder {position: absolute; top: 870; left: 851; width: 192; height: 77;}
+            #helpdesk-holder {position: absolute; top: 973; left: 851; width: 192; height: 77;}
+            #workflow-holder {position: absolute; top: 1073; left: 851; width: 192; height: 77;}
+            .logo-img {text-align: center; max-height: 100%; max-width: 100%;}
 
         </style>
     </head>
@@ -112,14 +118,14 @@
         
         <div id="bi" class="choices">
             5. Business Intelligence Tools<br>
-            <input type="radio" id="bi" name="migration" value="https://www.dropbox.com/app-integrations/domo">
-            <label for="bi"><a target="_blank" href="https://www.dropbox.com/app-integrations/domo">Domo</a></label>
+            <input type="radio" id="domo2" name="bi" value="https://www.dropbox.com/app-integrations/domo">
+            <label for="domo"><a target="_blank" href="https://www.dropbox.com/app-integrations/domo">Domo</a></label>
             
-            <input type="radio" id="bi" name="migration" value="https://help.looker.com/hc/en-us/articles/360021850833-Sending-and-scheduling-data-to-Dropbox-from-Looker-using-an-Looker-Action">
-            <label for="bi"><a target="_blank" href="https://help.looker.com/hc/en-us/articles/360021850833-Sending-and-scheduling-data-to-Dropbox-from-Looker-using-an-Looker-Action">Looker</a></label>
+            <input type="radio" id="looker2" name="bi" value="https://help.looker.com/hc/en-us/articles/360021850833-Sending-and-scheduling-data-to-Dropbox-from-Looker-using-an-Looker-Action">
+            <label for="looker2"><a target="_blank" href="https://help.looker.com/hc/en-us/articles/360021850833-Sending-and-scheduling-data-to-Dropbox-from-Looker-using-an-Looker-Action">Looker</a></label>
             
-            <input type="radio" id="bi" name="migration" value="https://help.tableau.com/current/pro/desktop/en-us/examples_dropbox.htm">
-            <label for="bi"><a target="_blank" href="https://help.tableau.com/current/pro/desktop/en-us/examples_dropbox.htm">Tableau</a></label>
+            <input type="radio" id="tableau" name="bi" value="https://help.tableau.com/current/pro/desktop/en-us/examples_dropbox.htm">
+            <label for="tableau"><a target="_blank" href="https://help.tableau.com/current/pro/desktop/en-us/examples_dropbox.htm">Tableau</a></label>
             
             <input type="radio" id="nobi" name="bi" value="nobi" checked="checked">
             <label for="bi">None</label>
@@ -187,23 +193,23 @@
         <div id="workflow" class="choices">
             10. Workflow Tools<br>
             
-            <input type="radio" id="nintex" name="workflow" value="https://www.dropbox.com/app-integrations/nintex">
-            <label for="nintex"><a target="_blank" href="https://www.dropbox.com/app-integrations/nintex">Nintex</a></label>
+            <input type="radio" id="nintex2" name="workflow" value="https://www.dropbox.com/app-integrations/nintex">
+            <label for="nintex2"><a target="_blank" href="https://www.dropbox.com/app-integrations/nintex">Nintex</a></label>
                         
             <input type="radio" id="k2" name="workflow" value="https://www.k2.com/news/k2-dropbox-partnership">
             <label for="k2"><a target="_blank" href="hhttps://www.k2.com/news/k2-dropbox-partnership">K2</a></label>
             
-            <input type="radio" id="builtio" name="workflow" value="https://www.built.io/products/flow/integrations">
-            <label for="builtio"><a target="_blank" href="https://www.built.io/products/flow/integrations">Software AG</a></label>
+            <input type="radio" id="softwareag" name="workflow" value="https://www.built.io/products/flow/integrations">
+            <label for="softwareag"><a target="_blank" href="https://www.built.io/products/flow/integrations">Software AG</a></label>
 
-            <input type="radio" id="trayio" name="workflow" value="https://tray.io/connectors/dropbox-integrations">
-            <label for="trayio"><a target="_blank" href="https://tray.io/connectors/dropbox-integrations">tray.io</a></label>
+            <input type="radio" id="trayio2" name="workflow" value="https://tray.io/connectors/dropbox-integrations">
+            <label for="trayio2"><a target="_blank" href="https://tray.io/connectors/dropbox-integrations">tray.io</a></label>
 
-            <input type="radio" id="ibm" name="workflow" value="https://www.dropbox.com/app-integrations/ibm">
-            <label for="ibm"><a target="_blank" href="https://www.dropbox.com/app-integrations/ibm">IBM App Connect</a></label>
+            <input type="radio" id="ibm2" name="workflow" value="https://www.dropbox.com/app-integrations/ibm">
+            <label for="ibm2"><a target="_blank" href="https://www.dropbox.com/app-integrations/ibm">IBM App Connect</a></label>
 
-            <input type="radio" id="workato" name="workflow" value="https://www.workato.com/integrations/dropbox">
-            <label for="workato"><a target="_blank" href="https://www.workato.com/integrations/dropbox">Workato</a></label>
+            <input type="radio" id="workato2" name="workflow" value="https://www.workato.com/integrations/dropbox">
+            <label for="workato2"><a target="_blank" href="https://www.workato.com/integrations/dropbox">Workato</a></label>
             
             <input type="radio" id="noworkflow" name="workflow" value="noworkflow" checked="checked">
             <label for="noworkflow">None</label>
@@ -217,43 +223,43 @@
             <img id="base-arch" src="lobarch-ex-lg.png"/>
             
             <div id="rec-hr-holder">
-                <a target = "_blank" href="#" id="rec-hr-link"><img id="rec-hr-img" src=""/></a>
+                <a target = "_blank" href="#" id="rec-hr-link"><img class="logo-img" id="rec-hr-img" src=""/></a>
             </div>
             
             <div id="marketing-holder">
-                <a  target = "_blank" href="#" id="marketing-link"><img id="marketing-img" src=""/></a>
+                <a  target = "_blank" href="#" id="marketing-link"><img class="logo-img" id="marketing-img" src=""/></a>
             </div>
             
             <div id="finance-holder">
-                <a  target = "_blank" href="#" id="finance-link"><img id="finance-img" src=""/></a>
+                <a  target = "_blank" href="#" id="finance-link"><img class="logo-img" id="finance-img" src=""/></a>
             </div>
             
             <div id="crm-holder">
-                <a  target = "_blank" href="#" id="crm-link"><img id="crm-img" src=""/></a>
+                <a  target = "_blank" href="#" id="crm-link"><img class="logo-img" id="crm-img" src=""/></a>
             </div>
             
             <div id="bi-holder">
-                <a  target = "_blank" href="#" id="bi-link"><img id="bi-img" src=""/></a>
+                <a  target = "_blank" href="#" id="bi-link"><img class="logo-img" id="bi-img" src=""/></a>
             </div>
             
             <div id="email-holder">
-                <a  target = "_blank" href="#" id="email-link"><img id="email-img" src=""/></a>
+                <a  target = "_blank" href="#" id="email-link"><img class="logo-img" id="email-img" src=""/></a>
             </div>
     
             <div id="chat-holder">
-                <a target = "_blank" href="#" id="chat-link"><img id="chat-img" src=""/></a>
+                <a target = "_blank" href="#" id="chat-link"><img class="logo-img" id="chat-img" src=""/></a>
             </div>        
             
             <div id="meetings-holder">
-                <a target = "_blank" href="#" id="meetings-link"><img id="meetings-img" src=""/></a>
+                <a target = "_blank" href="#" id="meetings-link"><img class="logo-img" id="meetings-img"src=""/></a>
             </div>        
             
             <div id="helpdesk-holder">
-                <a target = "_blank" href="#" id="helpdesk-link"><img id="helpdesk-img" src=""/></a>
+                <a target = "_blank" href="#" id="helpdesk-link"><img class="logo-img" id="helpdesk-img" src=""/></a>
             </div>        
             
             <div id="workflow-holder">
-                <a target = "_blank" href="#" id="workflow-link"><img id="workflow-img" src=""/></a>
+                <a target = "_blank" href="#" id="workflow-link"><img class="logo-img" id="workflow-img" src=""/></a>
             </div>        
             
             
